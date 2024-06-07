@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Eesoft_YP.DealsBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="40" MinWidth="660">
+
+    <Grid Height="40" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,5,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.65*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.65*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="ID" Margin="0,0,0,3" IsReadOnly="True" Style="{DynamicResource Input}" Text="1" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="50"/>
+
+        <TextBox x:Name="SupplyID" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Номер предложения" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Номер предложения" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="DemandID" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Номер потребности" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Номер потребности" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Com" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Комиссия" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Комиссия" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Price" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Стоимость услуг" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Стоимость услуг" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Share" Margin="0,0,0,4" Style="{DynamicResource Input}" Text="Доля риэлтора" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Доля риэлтора" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <Button BorderBrush="{StaticResource grey_2}" Height="24" Width="24" Grid.Column="6" Margin="5,0,0,0" HorizontalAlignment="Left">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/ic_edit_black_48dp.png"/>
+            </Button.Background>
+        </Button>
+        <Button BorderBrush="{StaticResource grey_2}" Height="24" Width="24" Grid.Column="6" Margin="0,0,5,0" HorizontalAlignment="Right">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/ic_close_black_48dp.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

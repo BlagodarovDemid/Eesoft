@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Roboto-Black.ttf" />
+    <None Remove="Fonts\Roboto-Bold.ttf" />
+    <None Remove="Fonts\Roboto-Medium.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
+    <None Remove="Resources\danger.png" />
+    <None Remove="Resources\ic_cancel_black_48dp.png" />
+    <None Remove="Resources\ic_clear_white_48dp.png" />
+    <None Remove="Resources\ic_close_black_48dp.png" />
+    <None Remove="Resources\ic_exposure_plus_1_black_48dp.png" />
+    <None Remove="Resources\ic_filter_list_black_18dp.png" />
+    <None Remove="Resources\ic_filter_list_black_24dp.png" />
+    <None Remove="Resources\ic_filter_list_black_48dp.png" />
+    <None Remove="Resources\ic_fullscreen_exit_black_48dp.png" />
+    <None Remove="Resources\ic_remove_white_48dp.png" />
+    <None Remove="Resources\ic_sync_black_48dp.png" />
+    <None Remove="Resources\logo.png" />
+    <None Remove="Resources\PopCross.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\danger.png" />
+    <Resource Include="Resources\ic_fullscreen_exit_black_48dp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Roboto-Black.ttf" />
+    <Resource Include="Fonts\Roboto-Bold.ttf" />
+    <Resource Include="Fonts\Roboto-Medium.ttf" />
+    <Resource Include="Fonts\Roboto-Regular.ttf" />
+    <Resource Include="Resources\ic_cancel_black_48dp.png" />
+    <Resource Include="Resources\ic_clear_white_48dp.png" />
+    <Resource Include="Resources\ic_close_black_48dp.png" />
+    <Resource Include="Resources\ic_edit_black_48dp.png" />
+    <Resource Include="Resources\ic_exposure_plus_1_black_48dp.png" />
+    <Resource Include="Resources\ic_filter_list_black_18dp.png" />
+    <Resource Include="Resources\ic_filter_list_black_24dp.png" />
+    <Resource Include="Resources\ic_filter_list_black_48dp.png" />
+    <Resource Include="Resources\ic_remove_white_48dp.png" />
+    <Resource Include="Resources\ic_sync_black_48dp.png" />
+    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\PopCross.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Eesoft_YP.Estate_Apartment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="80" MinWidth="660">
+
+    <Grid Height="80" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,5,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.65*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.65*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBox x:Name="ID" Margin="0,0,0,3" IsReadOnly="True" Style="{DynamicResource Input}" Text="1" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="50"/>
+        <TextBox x:Name="District_ID" Visibility="Hidden" Style="{DynamicResource Input}" Text="1" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="50"/>
+
+        <TextBox x:Name="Floor" Style="{DynamicResource Input}" Text="Этаж" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Этаж" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Rooms" Style="{DynamicResource Input}" Text="Количество комнат" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="120"/>
+        <Label Content="Количество комнат" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Latitude" Style="{DynamicResource Input}" Text="Широта" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Широта" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Longitude" Style="{DynamicResource Input}" Text="Долгота" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Долгота" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="City" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Город" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Город" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <ComboBox x:Name="District" Margin="0,0,0,3" IsEditable="True" Style="{DynamicResource DropDown}" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Foreground="{StaticResource ResourceKey=grey_5}" FontFamily="{StaticResource ResourceKey=Roboto-Regular}" BorderThickness="0.7" Height="24" Width="120" FontSize="12px" Loaded="District_Loaded"/>
+        <Label Content="Улица/Район" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="House" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Адрес дома" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Адрес дома" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="Number" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Номер" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Номер" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <TextBox x:Name="TotalArea" Margin="0,0,0,3" Style="{DynamicResource Input}" Text="Площадь" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="{StaticResource Roboto-Regular}" Height="24" Width="100"/>
+        <Label Content="Площадь" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="{StaticResource Roboto-Bold}" Foreground="{StaticResource grey_4}" FontSize="8px"/>
+
+        <Button BorderBrush="{StaticResource grey_2}" Height="24" Width="24" Grid.Column="6" Grid.RowSpan="2" Margin="5,0,0,0" HorizontalAlignment="Left">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/ic_edit_black_48dp.png"/>
+            </Button.Background>
+        </Button>
+        <Button BorderBrush="{StaticResource grey_2}" Height="24" Width="24" Grid.Column="6" Grid.RowSpan="2" Margin="0,0,5,0" HorizontalAlignment="Right">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/ic_close_black_48dp.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>
